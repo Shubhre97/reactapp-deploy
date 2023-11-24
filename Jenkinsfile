@@ -22,7 +22,7 @@ pipeline {
               sh "aws s3 sync build/  s3://reactapp-deploy-24"
               sh "aws cloudfront create-invalidation \
                  --distribution-id EIYKMF8QKCBXH \
-                 --paths /* "
+                 --paths '/*' "
                 
             }
         }
