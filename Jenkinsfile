@@ -7,12 +7,6 @@ pipeline {
             git branch: 'main', url: 'https://github.com/Shubhre97/reactapp-deploy'}
         }
 
-        stage('Code Scanning') {
-        
-        steps { echo 'sonar-scanner' }
-
-        }
-
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -21,7 +15,7 @@ pipeline {
                  } // steps install-dependencies closed
         } // stage install-dependencies closed
         
-        stage('Test') {
+        stage('Pushing to S3') {
             steps {
                 echo 'Testing..'
             }
