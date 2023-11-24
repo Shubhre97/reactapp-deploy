@@ -3,7 +3,8 @@ pipeline {
 
     stages {
         stage('Code Checkout'){
-            git branch: 'main', url: 'https://github.com/Shubhre97/reactapp-deploy'
+            steps{
+            git branch: 'main', url: 'https://github.com/Shubhre97/reactapp-deploy'}
         }
 
         stage('Code Scanning') {
